@@ -1,31 +1,42 @@
 package com.example;
 
 public class Appliance {
-    
-
-    // Constructor to initialize an ElectronicDevice object
-    public Appliance(String brand, String model) {
-        // TODO: Initialize the common attributes (brand, model) with the provided parameters
-    }
-
-    // TODO: Implement getters (and setters if necessary) for the brand and model.
-
-    // OPTIONALLY implement the required methods to pass the BonusTest.
-
-}
-
-package com.example;
-
-public class Appliance {
+    private String brand;
+    private String model;
+    private int powerUsage;
     // Attributes
     // TODO: Declare common attributes for electronic devices, such as brand and model and powerUsage.
 
     // Constructor
     public Appliance(String brand, String model, int powerUsage) {
+        this.brand = brand;
+        this.model = model;
+        this.powerUsage = powerUsage;
         // TODO: Initialize all attributes
     }
 
-    // Getters
+    public String getBrand(){
+        return this.brand;
+    }
+    public String getModel(){
+        return this.model;
+    }
+    public int getPowerUsage(){
+        return this.powerUsage;
+    }
+    public void setBrand(String brand){
+        this.brand = brand;
+    }   
+    public void setModel(String model){
+        this.model = model;
+    }
+    public void setPowerUsage(int powerUsage){
+        this.powerUsage = powerUsage;
+    }
+    public String displayInfo(){
+        return "Brand: " + getBrand()+ ", Model: "+  getModel()+ ", Power Usage: " + getPowerUsage() + " Watts";
+    }
+     // Getters
     // TODO: Implement getters for brand, model, and powerUsage
 
     // displayInfo Method
